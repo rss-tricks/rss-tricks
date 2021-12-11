@@ -1,17 +1,20 @@
 [[headers]]
   for = "/"
   [headers.values]
-    Content-Type = "text/xml"
+    Content-Type = "text/xml; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/index.xml"
   [headers.values]
-    Content-Type = "text/xml"
+    Content-Type = "text/xml; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/assets/style.xsl"
   [headers.value]
-    Content-Type = "text/xml"
+    Content-Type = "text/xml; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
 
 [[redirects]]
   from = "/"

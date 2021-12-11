@@ -1,7 +1,7 @@
 [[headers]]
   for = "/index.xml"
   [headers.values]
-    Content-Type = "application/rss+xml"
+    Content-Type = "text/xml"
 
 [[headers]]
   for = "/assets/style.xsl"

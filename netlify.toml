@@ -1,0 +1,16 @@
+[[headers]]
+  for = "/index.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml"
+
+[[headers]]
+  for = "/assets/style.xsl"
+  [headers.value]
+    Content-Type = "text/xml"
+
+[[redirects]]
+  from = "/"
+  to = "/index.xml"
+  status = 200
+  force = true
+

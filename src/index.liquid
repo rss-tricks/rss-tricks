@@ -11,21 +11,21 @@ permalink: index.xml
     <description>
       <![CDATA[ RSS-Tricks ]]>
     </description>
-    <link>https://rss-tricks.com</link>
+    <link>{{URL}}</link>
     <generator>11ty</generator>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://rss-tricks.com" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{{ currentDate }}</lastBuildDate>
+    <atom:link href="{{URL}}" rel="self" type="application/rss+xml"/>
     {% for post in collections.post reversed %}
       <item>
         <title><![CDATA[ {{post.data.title}} ]]></title>
         <description><![CDATA[ {{post.templateContent}} ]]></description>
-        <link>https://rss-tricks.com/#{{ post.data.title slug }}</link>
-        <guid isPermaLink="true">https://rss-tricks.com/#{{ post.data.title slug }}</guid>
+        <link>{{URL}}/#{{ post.data.title slug }}</link>
+        <guid isPermaLink="true">{{URL}}/#{{ post.data.title slug }}</guid>
         <dc:creator>
         <![CDATA[ RSS-Tricks ]]>
         </dc:creator>
-        <pubDate>{{ post.data.date }}</pubDate>
-        <published>{{ post.data.date }}</published>
+        <pubDate>{{ post.data.date ISOString }}</pubDate>
+        <published>{{ post.data.date ISOString }}</published>
       </item>
     {% endfor %}
   </channel>

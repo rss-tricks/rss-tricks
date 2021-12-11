@@ -1,0 +1,14 @@
+{
+  "name": "rss-tricks",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

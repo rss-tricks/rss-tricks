@@ -1,4 +1,9 @@
 [[headers]]
+  for = "/"
+  [headers.values]
+    Content-Type = "text/xml"
+
+[[headers]]
   for = "/index.xml"
   [headers.values]
     Content-Type = "text/xml"

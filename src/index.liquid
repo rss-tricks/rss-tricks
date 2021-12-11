@@ -1,0 +1,32 @@
+---
+permalink: index.xml
+---
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="assets/style.xsl"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>
+      <![CDATA[ RSS-Tricks ]]>
+    </title>
+    <description>
+      <![CDATA[ RSS-Tricks ]]>
+    </description>
+    <link>https://rss-tricks.com</link>
+    <generator>11ty</generator>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://rss-tricks.com" rel="self" type="application/rss+xml"/>
+    {% for post in collections.post reversed %}
+      <item>
+        <title><![CDATA[ {{post.data.title}} ]]></title>
+        <description><![CDATA[ {{post.templateContent}} ]]></description>
+        <link>https://rss-tricks.com/#{{ post.data.title slug }}</link>
+        <guid isPermaLink="true">https://rss-tricks.com/#{{ post.data.title slug }}</guid>
+        <dc:creator>
+        <![CDATA[ RSS-Tricks ]]>
+        </dc:creator>
+        <pubDate>{{ post.data.date }}</pubDate>
+        <published>{{ post.data.date }}</published>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
